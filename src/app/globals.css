@@ -10,4 +10,6 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--font-pretendard), -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
 }

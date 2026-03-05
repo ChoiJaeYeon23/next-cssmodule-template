@@ -60,6 +60,14 @@
   color: var(--text-primary);
 }
 
+.code {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background: var(--button-secondary-hover);
+  border: 1px solid var(--button-secondary-border);
+}
+
 .ctas {
   display: flex;
   flex-direction: row;
@@ -123,10 +131,6 @@ a.secondary {
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
   .page {
     --background: #000;
     --foreground: #000;

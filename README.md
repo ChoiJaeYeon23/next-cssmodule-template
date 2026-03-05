@@ -11,9 +11,10 @@ yarn install
 npm install
 
 # 개발 서버 실행
-yarn dev
+yarn start:dev
 # 또는
-npm run dev
+yarn start:local
+yarn start:prod
 ```
 
 브라우저에서 [http://localhost:3000](http://localhost:3000) 으로 접속하세요.
@@ -77,11 +78,23 @@ export default function MyComponent() {
 
 3. 로컬에 클론 후 `package.json`의 `name`을 프로젝트명으로 변경
 
+## 환경 변수 (.env)
+
+`.env.development`, `.env.production`, `.env.local` 파일이 템플릿에 포함되어 있습니다.  
+비밀키 등 민감한 정보를 `.env.local`에 넣을 경우, `.gitignore`에 추가하여 커밋되지 않도록 하세요.
+
+```gitignore
+.env.local
+```
+
 ## 스크립트
 
-| 명령어     | 설명           |
-| ---------- | -------------- |
-| `yarn dev` | 개발 서버 실행 |
-| `yarn build` | 프로덕션 빌드 |
-| `yarn start` | 빌드된 앱 실행 |
-| `yarn lint`  | ESLint 실행   |
+| 명령어         | 설명                      |
+| -------------- | ------------------------- |
+| `yarn start:dev`  | 개발 서버 (development)   |
+| `yarn start:local` | 개발 서버 (local)       |
+| `yarn start:prod`  | 개발 서버 (production)  |
+| `yarn host:dev`    | 빌드 후 서버 (development) |
+| `yarn host:local`  | 빌드 후 서버 (local)     |
+| `yarn host:prod`   | 빌드 후 서버 (production)  |
+| `yarn lint`       | ESLint 실행              |

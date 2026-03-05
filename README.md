@@ -6,9 +6,7 @@ Next.js + CSS Module 기반 웹 프로젝트 템플릿입니다.
 
 ```bash
 # 의존성 설치
-yarn install
-# 또는
-npm install
+yarn
 
 # 개발 서버 실행
 yarn start:dev

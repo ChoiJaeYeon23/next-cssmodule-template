@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist_Mono } from "next/font/google";
 import { pretendard } from "@/fonts/pretendard";
 import "./globals.css";
@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description: "Next.js starter template with CSS Modules",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${pretendard.variable} ${geistMono.variable}`}>
-        {children}
+        <main className="layout-main">{children}</main>
       </body>
     </html>
   );
